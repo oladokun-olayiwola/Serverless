@@ -1,0 +1,14 @@
+org: olayiwola
+app: auction
+service: auction-service
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 256
+  stage: ${opt:stage, 'dev'}
+  
+functions:
+  function1:
+    handler: handler.createAuction
